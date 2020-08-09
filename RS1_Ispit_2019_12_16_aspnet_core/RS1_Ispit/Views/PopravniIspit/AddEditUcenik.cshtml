@@ -1,0 +1,30 @@
+﻿@model AddEditUcenikVM
+
+@{
+    Layout = null;
+}
+
+@if (Model.PopravniIspitStavkaId == 0)
+{
+    <form id="nekaForma1">
+        <input asp-for="PopravniIspitId" hidden readonly />
+        <label>Učenik:</label>
+        <select asp-for="UcenikId" asp-items="Model.Ucenici"></select>
+        <br />
+        <label>Bodovi:</label>
+        <input asp-for="Bodovi" />
+        <input type="submit" value="Snimi" class="btn btn-default" />
+    </form>
+}
+else
+{
+    <form id="nekaForma2">
+        <input asp-for="PopravniIspitStavkaId" hidden readonly />
+        <label>Učenik:</label>
+        <input asp-for="Ucenik" readonly />
+        <br />
+        <label>Bodovi:</label>
+        <input asp-for="Bodovi" />
+        <input type="submit" value="Snimi" class="btn btn-default"/>
+    </form>
+}

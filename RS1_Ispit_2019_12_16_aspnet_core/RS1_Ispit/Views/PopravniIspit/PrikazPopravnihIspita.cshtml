@@ -1,0 +1,42 @@
+﻿@model PrikazPopravnihIspitaVM
+
+
+<br />
+<br />
+<br />
+
+<table class="table-bordered">
+    <thead>
+        <tr>
+            Popravni ispiti za @Model.Predmet - @Model.Skola - @Model.SkolskaGodina
+        </tr>
+        <tr>
+            <th>Datum popravnog ispita</th>
+            <th>Nastavnik</th>
+            <th>Broj učesnika na popravnom ispitu</th>
+            <th>Broj učesnika koji su položili</th>
+            <th>Akcija</th>
+        </tr>
+    </thead>
+    <tbody>
+        @foreach (var item in Model.Rows)
+        {
+            <tr>
+                <td>@item.Datum</td>
+                <td>@item.Nastavnik</td>
+                <td>@item.BrUcenikaNaPoprIsp</td>
+                <td>@item.BrPolozenihUcenika</td>
+                <td>
+                    <a asp-controller="PopravniIspit" asp-action="EditIspit" asp-route-Id="@item.PopravniIspitId" class="btn btn-warning">Uredi</a>
+                </td>
+            </tr>
+        }
+    </tbody>
+</table>
+
+<form asp-controller="PopravniIspit" asp-action="Dodaj" method="get">
+    <input asp-for="SkolskaGodinaId" hidden readonly />
+    <input asp-for="SkolaId" hidden readonly />
+    <input asp-for="PredmetId" hidden readonly />
+    <input type="submit" value="Dodaj" class="btn btn-primary" />
+</form>

@@ -1,0 +1,169 @@
+﻿@model EditIspitVM
+
+<br />
+<br />
+<br />
+
+
+<label>1. Član komisije:</label>
+<input asp-for="Clan1" readonly />
+<br />
+<label>2. Član komisije:</label>
+<input asp-for="Clan2" readonly />
+<br />
+<label>3. Član komisije:</label>
+<input asp-for="Clan3" readonly />
+<br />
+<label>Datum ispita:</label>
+<input asp-for="Datum" />
+<br />
+<label>Škola:</label>
+<input asp-for="Skola" />
+<br />
+<label>Školska godina:</label>
+<input asp-for="SkolskaGodina" />
+<br />
+<label>Predmet:</label>
+<input asp-for="Predmet" />
+<br />
+
+<div id="ajaxDiv"></div>
+<br />
+<a onclick="AddUcenik(@Model.PopravniIspitId) " class="btn btn-success">Dodaj učenika</a>
+<br />
+<br />
+<form asp-controller="PopravniIspit" asp-action="Dodaj" method="get">
+    <input asp-for="SkolskaGodinaId" hidden readonly />
+    <input asp-for="SkolaId" hidden readonly />
+    <input asp-for="PredmetId" hidden readonly />
+    <input type="submit" value="Dodaj popravni ispit" class="btn btn-primary" />
+</form>
+
+
+
+
+@section Scripts{ 
+
+<script>
+
+    $(document).ready(function () {
+        $.ajax({
+            method: "GET",
+            url: "/PopravniIspit/GetIspitStavke/@Model.PopravniIspitId",
+            success: function (response) {
+                $("#ajaxDiv").html(response);
+            }
+        });
+
+        UcenikJeOdsutan = function (PopravniIspitStavkaId) {
+            $.ajax({
+                method: "GET",
+                url: `/PopravniIspit/UcenikJeOdsutan/${PopravniIspitStavkaId}`,
+                success: function (response2) {
+                    $("#ajaxDiv").html(response2);
+                }
+            });
+        };
+
+         UcenikJePrisutan = function (PopravniIspitStavkaId) {
+            $.ajax({
+                method: "GET",
+                url: `/PopravniIspit/UcenikJePrisutan/${PopravniIspitStavkaId}`,
+                success: function (response3) {
+                    $("#ajaxDiv").html(response3);
+                }
+            });
+        };
+
+        AddUcenik = function (PopravniIspitId) {
+            $.ajax({
+                method: "GET",
+                url: `/PopravniIspit/AddUcenik/${PopravniIspitId}`,
+                success: function (response4) {
+                    $("#ajaxDiv").html(response4);
+                }
+            });
+        };
+
+        $("body").on("submit", "#nekaForma1", function (ev) {
+            ev.preventDefault();
+            $.ajax({
+                method: "POST",
+                url: "/PopravniIspit/AddUcenik",
+                data: $("#nekaForma1").serialize(),
+                success: function (response5) {
+                    $("#ajaxDiv").html(response5);
+                }
+            });
+        });
+
+        EditStavka = function (PopravniIspitStavkaId) {
+             $.ajax({
+                method: "GET",
+                url: `/PopravniIspit/EditStavka/${PopravniIspitStavkaId}`,
+                success: function (response6) {
+                    $("#ajaxDiv").html(response6);
+                }
+            });
+        };
+
+         $("body").on("submit", "#nekaForma2", function (ev) {
+            ev.preventDefault();
+            $.ajax({
+                method: "POST",
+                url: "/PopravniIspit/EditStavka",
+                data: $("#nekaForma2").serialize(),
+                success: function (response7) {
+                    $("#ajaxDiv").html(response7);
+                }
+            });
+         });
+
+
+
+        $("body").on("change", ".inputBodovi", function (ev) {
+            ev.preventDefault();
+            let input = $(ev.target);
+            $.ajax({
+                method: "POST",
+                url: "/PopravniIspit/EditBodovi",
+                data: input.parent().serialize(),
+                success: function (response7) {
+                    $("#ajaxDiv").html(response7);
+                }
+            });
+        });
+
+        
+        //EditBodovi = function (PopravniIspitStavkaId) {
+        //     $.ajax({
+        //        method: "GET",
+        //         url: `/PopravniIspit/EditBodovi`,
+        //        data:$(".bodoviForma").serialize(),
+        //        success: function (response8) {
+        //            $("#ajaxDiv").html(response8);
+        //        }
+        //    });
+        //};
+
+        //EditBodovi = function (PopravniIspitStavkaId) {
+           
+        //    var val1 = $(".input-Bodovi").val();
+        //    var val2 = PopravniIspitStavkaId;
+        //    $.ajax({
+        //        method: "GET",
+        //        url: "/PopravniIspit/EditBodovi",
+        //        data: { 'para1': val1, 'para2': val2 },
+        //         success: function (response8) {
+        //            $("#ajaxDiv").html(response8);
+        //        }
+        //    });
+        //};
+
+
+    });
+
+</script>
+
+
+}

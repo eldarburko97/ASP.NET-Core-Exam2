@@ -1,0 +1,79 @@
+﻿@model List<GetIspitStavkeVM>
+
+@{ 
+    Layout = null;
+}
+
+<br />
+<br />
+
+<table class="table-bordered">
+    <thead>
+        <tr>
+            <th>Učenik</th>
+            <th>Odjeljenje</th>
+            <th>Broj u dnevniku</th>
+            <th>Pristupio</th>
+            <th>Broj bodova (max 100)</th>
+            <th>Akcija</th>
+        </tr>
+    </thead>
+    <tbody>
+        @foreach (var item in Model)
+        {
+            <tr>
+                <td>@item.Ucenik</td>
+                <td>@item.Odjeljenje</td>
+                <td>@item.BrUDnevniku</td>
+                <td>
+                    @if (item.Bodovi == 0)
+                    {
+                        @:Nema pravo na popravni
+                    }
+                    else if (item.Pristupio)
+                    {
+                        <a onclick="UcenikJeOdsutan(@item.PopravniIspitStavkaId)">DA</a>
+                    }
+
+                    else
+                    {
+                        <a onclick="UcenikJePrisutan(@item.PopravniIspitStavkaId)">NE</a>
+                    }
+                </td>
+                <td>
+                    @if(item.Pristupio==false)
+                    {
+                        @:x
+                    }
+                    else
+                    {
+                    <form class="bodoviForma">
+                        <input type="text" name="PopravniIspitStavkaId" value="@item.PopravniIspitStavkaId" hidden readonly />
+                        <input type="text" name="Bodovi" value="@item.Bodovi" class="inputBodovi" />
+                    </form>
+                    }
+                </td>
+                <td>
+                    @if(item.Pristupio== false || item.Bodovi==0)
+                    {
+                        @:
+                    }
+                    else
+                    {
+                        <a onclick="EditStavka(@item.PopravniIspitStavkaId)" class="btn btn-warning">Uredi</a>
+                    }
+                </td>
+            </tr>
+        }
+    </tbody>
+</table>
+<br />
+
+
+
+
+
+
+
+
+

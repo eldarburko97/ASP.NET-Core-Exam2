@@ -1,0 +1,18 @@
+﻿@model Korak1VM
+
+<br />
+<br />
+<br />
+
+    <form asp-controller="PopravniIspit" asp-action="PrikazPopravnihIspita" method="get">
+        <label>Školska godina:</label>
+        <select asp-for="SkolskaGodinaId" asp-items="@Model.SkolskaGodina"></select>
+        <br />
+        <label>Škola:</label>
+        <select asp-for="SkolaId" asp-items="@Model.Skola"></select>
+        <br />
+        <label>Predmet:</label>
+        <select asp-for="PredmetId" asp-items="@Model.Predmet"></select>
+        <br />
+        <input type="submit" value="Odaberi" class="btn btn-primary" />
+    </form>
