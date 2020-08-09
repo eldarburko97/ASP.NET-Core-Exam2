@@ -1,0 +1,66 @@
+﻿@model List<TakmicenjeUcesnikVM>
+
+@{ 
+    Layout = null;
+    int TakmicenjeId = (int)ViewData["Takmicenje"];
+}
+
+<table class="table table-bordered">
+   <thead>
+       <tr>
+           <th>Odjeljenje</th>
+           <th>Broj u dnevniku</th>
+           <th>Pristupio</th>
+           <th>Rezultat bodovi (max 100)</th>
+           <th>Akcija</th>
+       </tr>
+   </thead>
+    <tbody>
+        @foreach (var item in Model)
+        {
+            <tr>
+                <td>@item.Odjeljenje</td>
+                <td>@item.BrUdnevniku</td>
+                <td>
+                    @if(item.Pristupio)
+                    {
+                        <a  onclick="UcesnikNijePristupio(@item.TakmicenjeUcesnikId)">DA</a>
+                    }
+                    else
+                    {
+                        <a  onclick="UcesnikJePristupio(@item.TakmicenjeUcesnikId)">NE</a>
+                    }
+                </td>
+                @*<td>@item.Bodovi</td>*@
+            @*<form class="bodovi-form">
+                <input type="text" value="@item.Bodovi" name="Bodovi"  />
+                <input type="text" value="@item.TakmicenjeUcesnikId" name="TakmicenjeUcesnikId"  />
+            </form>*@
+
+                
+               
+                <td>
+                  <form class="bodovi-form">
+                      <input type="text" name="Bodovi" value="@item.Bodovi" class="inputBodovi" />
+                      <input type="text" name="TakmicenjeUcesnikId" value="@item.TakmicenjeUcesnikId" hidden readonly />
+                  </form>
+                </td>
+               <td>
+                   @if(item.Pristupio)
+                   {
+                       <a onclick="EditUcesnik(@item.TakmicenjeUcesnikId)" class="btn btn-warning">Uredi</a>
+                   }
+                   else 
+                   {
+                       @:
+                   }
+               </td>
+            </tr>
+        }
+    </tbody>
+</table>
+<a onclick="AddUcesnik(@TakmicenjeId)" class="btn btn-primary">Dodaj učesnika</a>
+
+<button type="submit" value="Snimi" class="btn btn-success" form="bodovi-form"></button>
+
+

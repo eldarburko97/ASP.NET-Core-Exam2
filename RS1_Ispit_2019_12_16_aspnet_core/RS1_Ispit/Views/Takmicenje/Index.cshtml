@@ -1,0 +1,20 @@
+﻿@model Korak1VM
+
+<br />
+<br />
+<form asp-controller="Takmicenje" asp-action="PrikazTakmicenja" method="get">
+        <label>Škola domaćin:</label>
+        <select asp-for="SkolaId" asp-items="@Model.Skole"></select>
+        <br />
+        <label>Razred:</label>
+        <select asp-for="RazredId" asp-items="@Model.razredi">
+            <option>Odaberi razred</option>
+        </select>
+        <br />
+        <input type="submit" value="Odaberi" class="btn btn-success" />
+    </form>
+
+
+
+
+

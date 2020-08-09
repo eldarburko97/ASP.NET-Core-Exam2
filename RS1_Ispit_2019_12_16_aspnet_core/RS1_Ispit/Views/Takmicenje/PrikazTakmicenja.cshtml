@@ -1,0 +1,45 @@
+﻿@model Takmicenja
+
+@{ 
+    int SkolaId = (int) ViewData["Skola"];
+}
+
+<br />
+<br />
+<br />
+<table class="table table-bordered">
+    <tr>
+       Škola domaćin : @Model.SkolaDomacin
+        Razred : @Model.Razred
+    </tr>
+
+    <thead>
+       <tr>
+           <th>TakmičenjeID</th>
+           <th>Predmet</th>
+           <th>Razred</th>
+           <th>Datum</th>
+           <th>Broj učesnika koji nisu pristupili</th>
+           <th>Najbolji učesnik(Škola | Odjeljenje | Ime i prezime)</th>
+           <th>Akcija</th>
+       </tr>
+    </thead>
+    <tbody>
+        @foreach (var item in Model.takmicenja)
+        {
+            <tr>
+                <td>@item.TakmicenjeId</td>
+                <td>@item.Predmet</td>
+                <td>@item.Razred</td>
+                <td>@item.Datum</td>
+                <td>@item.BrUcesnikaKojiNisuPristupili</td>
+                <td>@item.NajboljiUcenik</td>
+                <td>
+                    <a asp-controller="Takmicenje" asp-action="Rezultati" asp-route-Id="@item.TakmicenjeId" class="btn btn-success">Rezultati</a>
+                </td>
+            </tr>
+        }
+    </tbody>
+</table>
+
+<a asp-controller="Takmicenje" asp-action="DodajTakmicenje" asp-route-SkolaId="@SkolaId" class="btn btn-primary">Dodaj</a>

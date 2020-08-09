@@ -1,0 +1,21 @@
+﻿@model DodajTakmicenjeVM
+
+<br />
+<br />
+<br />
+
+<div class="table-bordered">Dodavanje takmičenja</div>
+
+<form asp-controller="Takmicenje" asp-action="DodajTakmicenje" method="post">
+    <div class="table-bordered">
+        <input asp-for="SkolaId" hidden readonly />
+        Škola domaćin: @Model.SkolaDomacin
+        <br />
+        Predmet: <select asp-for="PredmetId" asp-items="@Model.Predmet"></select>
+        <br />
+        Razred: <select asp-for="RazredId" asp-items="@Model.Razred"></select>
+        <br />
+        Datum: <input asp-for="Datum" />
+    </div>
+    <input type="submit" value="Snimi" class="btn btn-primary" />
+</form>
