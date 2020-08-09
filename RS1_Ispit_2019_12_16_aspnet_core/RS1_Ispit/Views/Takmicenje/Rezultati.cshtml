@@ -1,0 +1,146 @@
+﻿@model RS1_Ispit_asp.net_core.ViewModels.TakmicenjeDetailsVM
+
+@{
+    ViewData["Title"] = "Rezultati";
+}
+
+<h2>Rezultati</h2>
+
+<div>
+    <input asp-for="TakmicenjeId" hidden readonly />
+    <input asp-for="SkolaId" hidden readonly />
+    <h4>TakmicenjeDetailsVM</h4>
+    <hr />
+    <dl class="dl-horizontal">
+        <dt>
+            @Html.DisplayNameFor(model => model.SkolaDomacin)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.SkolaDomacin)
+        </dd>
+        <dt>
+            @Html.DisplayNameFor(model => model.Predmet)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.Predmet)
+        </dd>
+        <dt>
+            @Html.DisplayNameFor(model => model.Razred)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.Razred)
+        </dd>
+        <dt>
+            @Html.DisplayNameFor(model => model.Datum)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.Datum)
+        </dd>
+    </dl>
+</div>
+<button class="btn btn-default">Zaključaj</button>
+
+<br />
+<div id="ajaxDiv"></div>
+<br />
+<a asp-controller="Takmicenje" asp-action="DodajTakmicenje" asp-route-SkolaId="@Model.SkolaId" class="btn btn-success">Novo takmičenje</a>
+
+@section Scripts{
+
+    <script>
+    $(document).ready(function(){
+        $.ajax({
+            method: "GET",
+            url: "/Takmicenje/GetTakmicenjeUcesnik/@Model.TakmicenjeId",
+            success: function (response) {
+                $("#ajaxDiv").html(response);
+            }
+        });
+
+        UcesnikNijePristupio = function (TakmicenjeUcesnikId) {
+            $.ajax({
+                method: "GET",
+                url: `/Takmicenje/UcesnikNijePristupio/${TakmicenjeUcesnikId}`,
+                success: function (response2) {
+                    $("#ajaxDiv").html(response2);
+                }
+            });
+        };
+
+         UcesnikJePristupio = function (TakmicenjeUcesnikId) {
+            $.ajax({
+                method: "GET",
+                url: `/Takmicenje/UcesnikJePristupio/${TakmicenjeUcesnikId}`,
+                success: function (response3) {
+                     $("#ajaxDiv").html(response3);
+                }
+            });
+        };
+
+       
+        AddUcesnik = function (TakmicenjeId) {
+            $.ajax({
+                method: "GET",
+                url: `/Takmicenje/AddUcesnik/${TakmicenjeId}`,
+                success: function (response6) {
+                    $("#ajaxDiv").html(response6);
+                }
+            });
+        };
+
+
+        $("body").on("submit", "#nekaForma2", function (ev) {
+            ev.preventDefault();
+            $.ajax({
+                method: "POST",
+                url: "/Takmicenje/AddUcesnik",
+                data: $("#nekaForma2").serialize(),
+                success: function (response5) {
+                    $("#ajaxDiv").html(response5);
+                }
+            });
+        });
+
+
+        EditUcesnik = function (TakmicenjeUcesnikId) {
+            $.ajax({
+                method: "GET",
+                url: `/Takmicenje/EditUcesnik/${TakmicenjeUcesnikId}`,
+                success: function (response7) {
+                    $("#ajaxDiv").html(response7);
+                }
+            });
+        };
+
+        $("body").on("submit", "#nekaForma3", function (ev) {
+            ev.preventDefault();
+            $.ajax({
+                method: "POST",
+                url: "/Takmicenje/EditUcesnik",
+                data: $("#nekaForma3").serialize(),
+                success: function (response8) {
+                    $("#ajaxDiv").html(response8);
+                }
+            });
+        });
+
+        $("body").on("focusout", ".inputBodovi", function (ev) {
+            ev.preventDefault();
+           // let input = $(ev.target);
+            $.ajax({
+                method: "POST",
+                url: "/Takmicenje/SetPoints",
+               // data: input.parent().serialize(),
+                data:$(ev.target).parent().serialize(),
+                success: function (response9) {
+                    $("#ajaxDiv").html(response9);
+                }
+            });
+        });
+
+
+    });
+    </script>
+
+
+}

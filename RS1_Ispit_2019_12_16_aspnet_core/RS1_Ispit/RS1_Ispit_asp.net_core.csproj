@@ -5,7 +5,26 @@
   </PropertyGroup>
 
   <ItemGroup>
+<<<<<<< HEAD
     <PackageReference Include="Microsoft.AspNetCore.All" Version="2.0.9" />
+=======
+    <Compile Remove="Migrations\20200207150023_TakmicenjeUcesnik.cs" />
+    <Compile Remove="Migrations\20200207150023_TakmicenjeUcesnik.Designer.cs" />
+    <Compile Remove="Migrations\20200207160236_NoveKolone.cs" />
+    <Compile Remove="Migrations\20200207160236_NoveKolone.Designer.cs" />
+    <Compile Remove="Migrations\20200207165340_TakmicenjeUcesnikTable.cs" />
+    <Compile Remove="Migrations\20200207165340_TakmicenjeUcesnikTable.Designer.cs" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <PackageReference Include="Microsoft.AspNetCore.All" Version="2.0.9" />
+    <PackageReference Include="Microsoft.EntityFrameworkCore" Version="2.2.2" />
+    <PackageReference Include="Microsoft.EntityFrameworkCore.SqlServer" Version="2.2.2" />
+    <PackageReference Include="Microsoft.EntityFrameworkCore.Tools" Version="2.2.2">
+      <PrivateAssets>all</PrivateAssets>
+      <IncludeAssets>runtime; build; native; contentfiles; analyzers; buildtransitive</IncludeAssets>
+    </PackageReference>
+>>>>>>> 18ae183d313d799b14f6b44308ee5960b08c77c2
     <PackageReference Include="Microsoft.VisualStudio.Web.CodeGeneration.Design" Version="2.0.4" />
   </ItemGroup>
 

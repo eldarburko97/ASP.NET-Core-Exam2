@@ -1,6 +1,7 @@
 {
   "format": 1,
   "restore": {
+<<<<<<< HEAD
     "C:\\Users\\Eldar\\Desktop\\Rs116122019\\rs1-2019-12-16\\RS1_Ispit_2019_12_16_aspnet_core\\RS1_Ispit\\RS1_Ispit_asp.net_core.csproj": {}
   },
   "projects": {
@@ -12,6 +13,19 @@
         "projectPath": "C:\\Users\\Eldar\\Desktop\\Rs116122019\\rs1-2019-12-16\\RS1_Ispit_2019_12_16_aspnet_core\\RS1_Ispit\\RS1_Ispit_asp.net_core.csproj",
         "packagesPath": "C:\\Users\\Eldar\\.nuget\\packages\\",
         "outputPath": "C:\\Users\\Eldar\\Desktop\\Rs116122019\\rs1-2019-12-16\\RS1_Ispit_2019_12_16_aspnet_core\\RS1_Ispit\\obj\\",
+=======
+    "C:\\Users\\Eldar\\Desktop\\RS1EldoIspiti\\Rs1 predzadnji apsolventski\\RS1_Ispit_2019_12_16_aspnet_core\\RS1_Ispit\\RS1_Ispit_asp.net_core.csproj": {}
+  },
+  "projects": {
+    "C:\\Users\\Eldar\\Desktop\\RS1EldoIspiti\\Rs1 predzadnji apsolventski\\RS1_Ispit_2019_12_16_aspnet_core\\RS1_Ispit\\RS1_Ispit_asp.net_core.csproj": {
+      "version": "1.0.0",
+      "restore": {
+        "projectUniqueName": "C:\\Users\\Eldar\\Desktop\\RS1EldoIspiti\\Rs1 predzadnji apsolventski\\RS1_Ispit_2019_12_16_aspnet_core\\RS1_Ispit\\RS1_Ispit_asp.net_core.csproj",
+        "projectName": "RS1_Ispit_asp.net_core",
+        "projectPath": "C:\\Users\\Eldar\\Desktop\\RS1EldoIspiti\\Rs1 predzadnji apsolventski\\RS1_Ispit_2019_12_16_aspnet_core\\RS1_Ispit\\RS1_Ispit_asp.net_core.csproj",
+        "packagesPath": "C:\\Users\\Eldar\\.nuget\\packages\\",
+        "outputPath": "C:\\Users\\Eldar\\Desktop\\RS1EldoIspiti\\Rs1 predzadnji apsolventski\\RS1_Ispit_2019_12_16_aspnet_core\\RS1_Ispit\\obj\\",
+>>>>>>> 18ae183d313d799b14f6b44308ee5960b08c77c2
         "projectStyle": "PackageReference",
         "fallbackFolders": [
           "C:\\Microsoft\\Xamarin\\NuGet\\",
@@ -47,6 +61,23 @@
               "target": "Package",
               "version": "[2.0.9, )"
             },
+<<<<<<< HEAD
+=======
+            "Microsoft.EntityFrameworkCore": {
+              "target": "Package",
+              "version": "[2.2.2, )"
+            },
+            "Microsoft.EntityFrameworkCore.SqlServer": {
+              "target": "Package",
+              "version": "[2.2.2, )"
+            },
+            "Microsoft.EntityFrameworkCore.Tools": {
+              "include": "Runtime, Build, Native, ContentFiles, Analyzers, BuildTransitive",
+              "suppressParent": "All",
+              "target": "Package",
+              "version": "[2.2.2, )"
+            },
+>>>>>>> 18ae183d313d799b14f6b44308ee5960b08c77c2
             "Microsoft.NETCore.App": {
               "suppressParent": "All",
               "target": "Package",

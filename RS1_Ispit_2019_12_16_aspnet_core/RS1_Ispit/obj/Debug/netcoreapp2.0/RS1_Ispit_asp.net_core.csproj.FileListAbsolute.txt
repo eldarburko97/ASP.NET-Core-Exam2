@@ -64,6 +64,7 @@ C:\tmp\RS1_Ispit_2018_11_19_aspnet_core\RS1_Ispit_2018_11_19_aspnet_core\RS1_Isp
 C:\tmp\RS1_Ispit_2018_11_19_aspnet_core\RS1_Ispit_2018_11_19_aspnet_core\RS1_Ispit\obj\Debug\netcoreapp2.0\RS1_Ispit_asp.net_core.AssemblyInfo.cs
 C:\tmp\RS1_Ispit_2018_11_19_aspnet_core\RS1_Ispit_2018_11_19_aspnet_core\RS1_Ispit\obj\Debug\netcoreapp2.0\RS1_Ispit_asp.net_core.dll
 C:\tmp\RS1_Ispit_2018_11_19_aspnet_core\RS1_Ispit_2018_11_19_aspnet_core\RS1_Ispit\obj\Debug\netcoreapp2.0\RS1_Ispit_asp.net_core.pdb
+<<<<<<< HEAD
 C:\Users\Eldar\Desktop\Rs116122019\rs1-2019-12-16\RS1_Ispit_2019_12_16_aspnet_core\RS1_Ispit\bin\Debug\netcoreapp2.0\appsettings.Development.json
 C:\Users\Eldar\Desktop\Rs116122019\rs1-2019-12-16\RS1_Ispit_2019_12_16_aspnet_core\RS1_Ispit\bin\Debug\netcoreapp2.0\appsettings.json
 C:\Users\Eldar\Desktop\Rs116122019\rs1-2019-12-16\RS1_Ispit_2019_12_16_aspnet_core\RS1_Ispit\bin\Debug\netcoreapp2.0\bundleconfig.json
@@ -94,3 +95,35 @@ C:\Users\Eldar\Desktop\RS1EldoIspiti\Rs116122019\rs1-2019-12-16\RS1_Ispit_2019_1
 C:\Users\Eldar\Desktop\RS1EldoIspiti\Rs116122019\rs1-2019-12-16\RS1_Ispit_2019_12_16_aspnet_core\RS1_Ispit\obj\Debug\netcoreapp2.0\RS1_Ispit_asp.net_core.pdb
 C:\Users\Eldar\Desktop\Rs116122019\rs1-2019-12-16\RS1_Ispit_2019_12_16_aspnet_core\RS1_Ispit\obj\Debug\netcoreapp2.0\RS1_Ispit_asp.net_core.csproj.CoreCompileInputs.cache
 C:\Users\Eldar\Desktop\Rs116122019\rs1-2019-12-16\RS1_Ispit_2019_12_16_aspnet_core\RS1_Ispit\obj\Debug\netcoreapp2.0\RS1_Ispit_asp.net_core.genruntimeconfig.cache
+=======
+C:\Users\Eldar\Desktop\Rs1 predzadnji apsolventski\RS1_Ispit_2019_12_16_aspnet_core\RS1_Ispit\bin\Debug\netcoreapp2.0\appsettings.Development.json
+C:\Users\Eldar\Desktop\Rs1 predzadnji apsolventski\RS1_Ispit_2019_12_16_aspnet_core\RS1_Ispit\bin\Debug\netcoreapp2.0\appsettings.json
+C:\Users\Eldar\Desktop\Rs1 predzadnji apsolventski\RS1_Ispit_2019_12_16_aspnet_core\RS1_Ispit\bin\Debug\netcoreapp2.0\bundleconfig.json
+C:\Users\Eldar\Desktop\Rs1 predzadnji apsolventski\RS1_Ispit_2019_12_16_aspnet_core\RS1_Ispit\bin\Debug\netcoreapp2.0\Properties\launchSettings.json
+C:\Users\Eldar\Desktop\Rs1 predzadnji apsolventski\RS1_Ispit_2019_12_16_aspnet_core\RS1_Ispit\bin\Debug\netcoreapp2.0\RS1_Ispit_asp.net_core.deps.json
+C:\Users\Eldar\Desktop\Rs1 predzadnji apsolventski\RS1_Ispit_2019_12_16_aspnet_core\RS1_Ispit\bin\Debug\netcoreapp2.0\RS1_Ispit_asp.net_core.runtimeconfig.json
+C:\Users\Eldar\Desktop\Rs1 predzadnji apsolventski\RS1_Ispit_2019_12_16_aspnet_core\RS1_Ispit\bin\Debug\netcoreapp2.0\RS1_Ispit_asp.net_core.runtimeconfig.dev.json
+C:\Users\Eldar\Desktop\Rs1 predzadnji apsolventski\RS1_Ispit_2019_12_16_aspnet_core\RS1_Ispit\bin\Debug\netcoreapp2.0\RS1_Ispit_asp.net_core.dll
+C:\Users\Eldar\Desktop\Rs1 predzadnji apsolventski\RS1_Ispit_2019_12_16_aspnet_core\RS1_Ispit\bin\Debug\netcoreapp2.0\RS1_Ispit_asp.net_core.pdb
+C:\Users\Eldar\Desktop\Rs1 predzadnji apsolventski\RS1_Ispit_2019_12_16_aspnet_core\RS1_Ispit\obj\Debug\netcoreapp2.0\RS1_Ispit_asp.net_core.AssemblyInfoInputs.cache
+C:\Users\Eldar\Desktop\Rs1 predzadnji apsolventski\RS1_Ispit_2019_12_16_aspnet_core\RS1_Ispit\obj\Debug\netcoreapp2.0\RS1_Ispit_asp.net_core.AssemblyInfo.cs
+C:\Users\Eldar\Desktop\Rs1 predzadnji apsolventski\RS1_Ispit_2019_12_16_aspnet_core\RS1_Ispit\obj\Debug\netcoreapp2.0\RS1_Ispit_asp.net_core.dll
+C:\Users\Eldar\Desktop\Rs1 predzadnji apsolventski\RS1_Ispit_2019_12_16_aspnet_core\RS1_Ispit\obj\Debug\netcoreapp2.0\RS1_Ispit_asp.net_core.pdb
+C:\Users\Eldar\Desktop\Rs1 predzadnji apsolventski\RS1_Ispit_2019_12_16_aspnet_core\RS1_Ispit\obj\Debug\netcoreapp2.0\RS1_Ispit_asp.net_core.csprojAssemblyReference.cache
+C:\Users\Eldar\Desktop\RS1EldoIspiti\Rs1 predzadnji apsolventski\RS1_Ispit_2019_12_16_aspnet_core\RS1_Ispit\bin\Debug\netcoreapp2.0\appsettings.Development.json
+C:\Users\Eldar\Desktop\RS1EldoIspiti\Rs1 predzadnji apsolventski\RS1_Ispit_2019_12_16_aspnet_core\RS1_Ispit\bin\Debug\netcoreapp2.0\appsettings.json
+C:\Users\Eldar\Desktop\RS1EldoIspiti\Rs1 predzadnji apsolventski\RS1_Ispit_2019_12_16_aspnet_core\RS1_Ispit\bin\Debug\netcoreapp2.0\bundleconfig.json
+C:\Users\Eldar\Desktop\RS1EldoIspiti\Rs1 predzadnji apsolventski\RS1_Ispit_2019_12_16_aspnet_core\RS1_Ispit\bin\Debug\netcoreapp2.0\Properties\launchSettings.json
+C:\Users\Eldar\Desktop\RS1EldoIspiti\Rs1 predzadnji apsolventski\RS1_Ispit_2019_12_16_aspnet_core\RS1_Ispit\bin\Debug\netcoreapp2.0\RS1_Ispit_asp.net_core.deps.json
+C:\Users\Eldar\Desktop\RS1EldoIspiti\Rs1 predzadnji apsolventski\RS1_Ispit_2019_12_16_aspnet_core\RS1_Ispit\bin\Debug\netcoreapp2.0\RS1_Ispit_asp.net_core.runtimeconfig.json
+C:\Users\Eldar\Desktop\RS1EldoIspiti\Rs1 predzadnji apsolventski\RS1_Ispit_2019_12_16_aspnet_core\RS1_Ispit\bin\Debug\netcoreapp2.0\RS1_Ispit_asp.net_core.runtimeconfig.dev.json
+C:\Users\Eldar\Desktop\RS1EldoIspiti\Rs1 predzadnji apsolventski\RS1_Ispit_2019_12_16_aspnet_core\RS1_Ispit\bin\Debug\netcoreapp2.0\RS1_Ispit_asp.net_core.dll
+C:\Users\Eldar\Desktop\RS1EldoIspiti\Rs1 predzadnji apsolventski\RS1_Ispit_2019_12_16_aspnet_core\RS1_Ispit\bin\Debug\netcoreapp2.0\RS1_Ispit_asp.net_core.pdb
+C:\Users\Eldar\Desktop\RS1EldoIspiti\Rs1 predzadnji apsolventski\RS1_Ispit_2019_12_16_aspnet_core\RS1_Ispit\obj\Debug\netcoreapp2.0\RS1_Ispit_asp.net_core.csprojAssemblyReference.cache
+C:\Users\Eldar\Desktop\RS1EldoIspiti\Rs1 predzadnji apsolventski\RS1_Ispit_2019_12_16_aspnet_core\RS1_Ispit\obj\Debug\netcoreapp2.0\RS1_Ispit_asp.net_core.AssemblyInfoInputs.cache
+C:\Users\Eldar\Desktop\RS1EldoIspiti\Rs1 predzadnji apsolventski\RS1_Ispit_2019_12_16_aspnet_core\RS1_Ispit\obj\Debug\netcoreapp2.0\RS1_Ispit_asp.net_core.AssemblyInfo.cs
+C:\Users\Eldar\Desktop\RS1EldoIspiti\Rs1 predzadnji apsolventski\RS1_Ispit_2019_12_16_aspnet_core\RS1_Ispit\obj\Debug\netcoreapp2.0\RS1_Ispit_asp.net_core.dll
+C:\Users\Eldar\Desktop\RS1EldoIspiti\Rs1 predzadnji apsolventski\RS1_Ispit_2019_12_16_aspnet_core\RS1_Ispit\obj\Debug\netcoreapp2.0\RS1_Ispit_asp.net_core.pdb
+C:\Users\Eldar\Desktop\RS1EldoIspiti\Rs1 predzadnji apsolventski\RS1_Ispit_2019_12_16_aspnet_core\RS1_Ispit\obj\Debug\netcoreapp2.0\RS1_Ispit_asp.net_core.csproj.CoreCompileInputs.cache
+C:\Users\Eldar\Desktop\RS1EldoIspiti\Rs1 predzadnji apsolventski\RS1_Ispit_2019_12_16_aspnet_core\RS1_Ispit\obj\Debug\netcoreapp2.0\RS1_Ispit_asp.net_core.genruntimeconfig.cache
+>>>>>>> 18ae183d313d799b14f6b44308ee5960b08c77c2

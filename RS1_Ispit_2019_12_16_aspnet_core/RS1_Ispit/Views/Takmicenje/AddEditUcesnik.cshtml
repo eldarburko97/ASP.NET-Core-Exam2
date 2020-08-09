@@ -1,0 +1,37 @@
+﻿@model AddEditUcesnikVM
+
+@{
+    Layout = null;
+}
+
+<br />
+@if (Model.TakmicenjeUcesnikId == 0)
+    {
+        <form id="nekaForma2">
+            <input asp-for="TakmicenjeId" hidden readonly />
+            <input asp-for="TakmicenjeUcesnikId" hidden readonly />
+            <label>Učesnik:</label>
+            <select asp-for="OdjeljenjeStavkaId" asp-items="Model.Ucesnik"></select>
+            <br />
+            <label>Bodovi:</label>
+            <input asp-for="Bodovi" />
+            <br />
+            <input type="submit" value="Snimi" class="btn btn-default" />
+        </form>
+    }
+    else
+    {
+        <form id="nekaForma3">
+            <input asp-for="TakmicenjeId" hidden readonly />
+            <input asp-for="TakmicenjeUcesnikId" hidden readonly />
+            <label>Učesnik:</label>
+            <select asp-for="OdjeljenjeStavkaId" asp-items="Model.Ucesnik"></select>
+            <br />
+            <label>Bodovi:</label>
+            <input asp-for="Bodovi" />
+            <br />
+            <input type="submit" value="Snimi" class="btn btn-default" />
+        </form>
+    }
+
+
